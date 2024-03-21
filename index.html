@@ -11,7 +11,7 @@
       padding: 0;
     }
 
-    /* Adjust layout to position chat beside video */
+    /* Adjust layout to position chat beside video on desktop and below on mobile */
     body {
       background-color: #1f1f1f; /* Set background color to dark gray */
       color: #fff; /* Set text color to white for better visibility */
@@ -63,6 +63,20 @@
 
     footer a:hover {
       text-decoration: underline; /* Add underline on hover */
+    }
+
+    /* Media query for screens smaller than 600px */
+    @media only screen and (max-width: 600px) {
+      .container {
+        flex-direction: column; /* Change flex direction to column for smaller screens */
+      }
+      .video-wrapper,
+      .chat-wrapper {
+        flex-basis: 100%; /* Set both video and chat wrappers to take up 100% of the container */
+      }
+      .video-wrapper iframe {
+        height: 70vh; /* Adjust the height of the video on smaller screens */
+      }
     }
   </style>
 </head>

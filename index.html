@@ -29,9 +29,16 @@
 
     .video-wrapper,
     .chat-wrapper {
-      flex-basis: 50%; /* Each wrapper takes up 50% of the container */
       box-sizing: border-box; /* Include padding and border in the width */
       padding: 10px; /* Add padding around each wrapper */
+    }
+
+    .video-wrapper {
+      flex-basis: 60%; /* Set video wrapper to take up 60% of the container */
+    }
+
+    .chat-wrapper {
+      flex-basis: 40%; /* Set chat wrapper to take up 40% of the container */
     }
 
     .video-wrapper iframe,

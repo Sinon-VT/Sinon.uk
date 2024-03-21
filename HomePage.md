@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Home
 permalink: /https://sinon-vt.github.io/Home
 ---

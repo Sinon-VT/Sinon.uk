@@ -16,17 +16,22 @@
       background-color: #000; /* Set background color to black */
       color: #fff; /* Set text color to white for better visibility */
       font-family: Arial, sans-serif; /* Specify font family */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Set minimum height to 100% of viewport height */
     }
 
     .container {
+      flex: 1; /* Expand container to fill remaining vertical space */
       display: flex;
       flex-wrap: wrap; /* Allow items to wrap if screen is too small */
     }
 
     .video-wrapper,
     .chat-wrapper {
-      flex: 1; /* Both video and chat wrappers will take equal space */
-      margin: 10px; /* Add margin around each wrapper */
+      flex-basis: 50%; /* Each wrapper takes up 50% of the container */
+      box-sizing: border-box; /* Include padding and border in the width */
+      padding: 10px; /* Add padding around each wrapper */
     }
 
     .video-wrapper iframe,
@@ -39,7 +44,7 @@
     footer {
       width: 100%;
       text-align: center;
-      margin-top: 20px; /* Add space between content and footer */
+      margin-top: auto; /* Push footer to the bottom of the page */
       color: #aaa; /* Dim footer text color */
       font-size: 14px; /* Adjust footer text size */
     }
@@ -57,13 +62,13 @@
 <body>
   <div class="container">
     <!-- Twitch Video Embed Code -->
-    <div class="video-wrapper" style="padding-bottom: 56.25%; position: relative;">
-      <iframe src="https://player.twitch.tv/?autoplay=false&channel=SinonVR&parent=sinon.uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    <div class="video-wrapper">
+      <iframe src="https://player.twitch.tv/?autoplay=false&channel=SinonVR&parent=sinon.uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
     </div>
     
     <!-- Twitch Chat Embed Code -->
-    <div class="chat-wrapper" style="padding-bottom: 56.25%; position: relative;">
-      <iframe src="https://www.twitch.tv/embed/SinonVR/chat?darkpopout&parent=sinon.uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" style="position: absolute; top: 0; left: 0; width: 50%; height: 100%;"></iframe>
+    <div class="chat-wrapper">
+      <iframe src="https://www.twitch.tv/embed/SinonVR/chat?darkpopout&parent=sinon.uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
     </div>
   </div>
   <footer>

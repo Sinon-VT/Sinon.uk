@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Home
-permalink: /Home/
+permalink: /https://sinon-vt.github.io/Home
 ---
 
 # HomePage

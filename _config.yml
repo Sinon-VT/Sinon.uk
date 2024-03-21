@@ -1,0 +1,11 @@
+# Site settings
+title: Sinon
+description: Your site description
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "Sinon.uk" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima # change this to your desired theme, or remove this line to use the default theme
+plugins:
+  - jekyll-feed
